@@ -7,10 +7,21 @@ namespace CSharpFeatures
   class Program
   {
     static List<int> myList = new List<int>();
-
-    static List<string> stringList = new List<string>();
     static void Main(string[] args)
     {
+      ActionFunc actionFunc = new ActionFunc();
+
+      Func<string, string, double> returningFunction = actionFunc.ReturnValue;
+
+      double returnedResult = returningFunction("BMW", "M6");
+      Show("Zwrócona wartośc z delegata Func: " + returningFunction("BMW", "M6"));
+
+
+      Action<string, string> doSomethingVoid = actionFunc.DoSomething;
+
+      doSomethingVoid("Audi", "R8");
+
+
       FillList();
       //cała lista
       ShowListElements(myList);
@@ -25,10 +36,49 @@ namespace CSharpFeatures
       ShowListElements(myList.Where(x => x > 3));// tutaj prawdopodobnie również pod spodem działa yield
       DivLine();
       ShowListElements(Calculate(myList));
+      DivLine();
 
 
+      //wystąpienia tych samych cyfr w kolekcji--------------------------------------------------------------------
+      int test = 12697332;
+      var testArray = test.ToString().ToCharArray();
+
+      var groups = testArray.GroupBy(v => v);
+      foreach (var group in groups)
+        Console.WriteLine("Value {0} has {1} items", group.Key, group.Count());
+      DivLine();
+
+
+
+      //wystąpienia tych samych cyfr w kolekcji inny sposób
+      int count = 1;
+      for (int i = 0; i < testArray.Length; i++)
+      {
+        for (int j = i; j < testArray.Length - 1; j++)
+        {
+          if (testArray[i] == testArray[j + 1])
+            Console.WriteLine("Powtarza się liczba" + testArray[i]);
+        }
+      }
+
+
+      //--------------------------------------------------------------------
+      Console.ReadKey();
+      Some some = new Some();
+      some.SomeMethod(SomeDelegateMethod);
+      DivLine();
+
+
+
+      //--------------------------------------------------------------------
+      Some.Wow();
       Console.WriteLine("The end of application!");
       Console.ReadKey();
+    }
+
+    static void SomeDelegateMethod(int i)
+    {
+      Show("Dane z metody innej klasy przez uzycie delegata:" + i);
     }
 
     static void FillList()
@@ -43,19 +93,6 @@ namespace CSharpFeatures
       myList.Add(8);//true
       myList.Add(9);//true
       myList.Add(10);//true
-    }
-
-    static void FillStringList()
-    {
-      stringList.Add("jeden");
-      stringList.Add("jeden");
-      stringList.Add("dwa");
-      stringList.Add("dwa");
-      stringList.Add("dwa");
-      stringList.Add("jeden");
-      stringList.Add("trzy");
-      stringList.Add("trzy");
-      stringList.Add("cztery");
     }
 
 
