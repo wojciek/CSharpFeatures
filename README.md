@@ -1,16 +1,19 @@
 # CSharpFeatures
 `
-Collections
+``Simple Collections
 `
 `
-Delegates
+Simple Delegates including in it Action<T> i Func<TParameter, TOutput> 
 `
 `
-Generics
+Simple Generics
 `
 `
-Reflection
+Simple Reflection
 `
 `
 Count the same digit in number
+`
+`
+Simple Events
 `
