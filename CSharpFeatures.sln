@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventService", "EventReceiv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventDomain", "EventDomain\EventDomain.csproj", "{060B27A7-BCDE-4F52-A3EE-573979F0C22C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{BF628E12-0D96-4982-AACB-2853CF8DCE87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{060B27A7-BCDE-4F52-A3EE-573979F0C22C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{060B27A7-BCDE-4F52-A3EE-573979F0C22C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{060B27A7-BCDE-4F52-A3EE-573979F0C22C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF628E12-0D96-4982-AACB-2853CF8DCE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF628E12-0D96-4982-AACB-2853CF8DCE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF628E12-0D96-4982-AACB-2853CF8DCE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF628E12-0D96-4982-AACB-2853CF8DCE87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
