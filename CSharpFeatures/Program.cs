@@ -9,6 +9,7 @@ namespace CSharpFeatures
     static List<int> myList = new List<int>();
     static void Main(string[] args)
     {
+      DivLine("Delegaty Action i Func");//-------------------------------------------------------------
       ActionFunc actionFunc = new ActionFunc();
 
       Func<string, string, double> returningFunction = actionFunc.ReturnValue;
@@ -20,10 +21,41 @@ namespace CSharpFeatures
       Action<string, string> doSomethingVoid = actionFunc.DoSomething;
 
       doSomethingVoid("Audi", "R8");
+      DivLine("Delegaty Action i Func");//-------------------------------------------------------------
 
 
-      FillList();
-      //cała lista
+      DivLine("Refleksje");//-------------------------------------------------------------
+      Show(SomeReflection.TypeOfMethod());
+
+      Show(SomeReflection.TypeOfMethodArray());
+
+      Show("Tworzenie listy w pętli zwyczajne:");
+      SomeReflection.CreateList();
+      SomeReflection.CreateList();
+      SomeReflection.CreateList();
+      SomeReflection.CreateList();
+
+      Show("Tworzenie listy w pętli za pomocą refleksji - Activator Create instance of List<int>");
+      SomeReflection.CreateListReflection();
+      SomeReflection.CreateListReflection();
+      SomeReflection.CreateListReflection();
+      SomeReflection.CreateListReflection();
+
+      Show("TDodawanie elementów do listy zwyczajnie");
+      SomeReflection.AddListElements();
+      SomeReflection.AddListElements();
+      SomeReflection.AddListElements();
+      SomeReflection.AddListElements();
+
+      Show("Dodawanie elementów do listy przez refleksje");
+      SomeReflection.AddListElementsReflection();
+      SomeReflection.AddListElementsReflection();
+      SomeReflection.AddListElementsReflection();
+      SomeReflection.AddListElementsReflection();
+
+      DivLine("Refleksje");//-------------------------------------------------------------
+      DivLine("Yield");//-------------------------------------------------------------
+      FillList();//wypełnij listę elementami int
       ShowListElements(myList);
       DivLine();
       //wyfiltrowana lista jednak tworzymy nową liste która zawiera wyfiltrowane dane
@@ -40,6 +72,7 @@ namespace CSharpFeatures
 
 
       //wystąpienia tych samych cyfr w kolekcji--------------------------------------------------------------------
+      DivLine("Wystąpienie tego samego Chara w kolejcji");//-------------------------------------------------------------
       int test = 12697332;
       var testArray = test.ToString().ToCharArray();
 
@@ -62,7 +95,7 @@ namespace CSharpFeatures
       }
 
 
-      //--------------------------------------------------------------------
+      DivLine("Zwykłe delegaty");//-------------------------------------------------------------
       Console.ReadKey();
       Some some = new Some();
       some.SomeMethod(SomeDelegateMethod);
@@ -70,7 +103,7 @@ namespace CSharpFeatures
 
 
 
-      //--------------------------------------------------------------------
+      DivLine("Wywołanie delegata z invoke");//-------------------------------------------------------------
       Some.Wow();
       Console.WriteLine("The end of application!");
       Console.ReadKey();
@@ -138,9 +171,16 @@ namespace CSharpFeatures
       Console.WriteLine(data);
     }
 
-    static void DivLine()
+    static void DivLine(string title = null)
     {
-      Console.WriteLine("-------------------------------");
+      if (title == null)
+      {
+        Console.WriteLine("-------------------------------");
+      }
+      else
+      {
+        Console.WriteLine("## " + title + " -------------------------------");
+      }
     }
 
     static void ShowListElements(IEnumerable<int> list)
