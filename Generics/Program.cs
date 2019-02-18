@@ -16,6 +16,12 @@ namespace Generics
 
       Console.WriteLine("-------------------------------------------------------------");
       MergeAndShow(ref wartoscPierwsza, ref wartoscDruga);
+
+      string a;
+      int b;
+      SetValue(out a, out b);
+      MergeAndShow(ref a, ref b);
+
       Console.ReadKey();
     }
 
@@ -29,6 +35,12 @@ namespace Generics
     public static void MergeAndShow<T1, T2>(ref T1 var1, ref T2 var2)
     {
       Console.WriteLine("Połączone wartości po zamianie: {0} {1}", var1, var2);
+    }
+
+    public static void SetValue(out string var1, out int var2)
+    {
+      var1 = "nadana wartość referencyjna pierwsza";
+      var2 = 2;
     }
   }
 }
