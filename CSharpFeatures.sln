@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtensionMethod", "Extensio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generics", "Generics\Generics.csproj", "{E19EC44C-5229-4BCA-A95B-4E725FDB050D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallestHigher", "SmallestHigher\SmallestHigher.csproj", "{ABCE4C14-DB7B-40EE-9DB7-353270ACFB63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmallestHigher", "SmallestHigher\SmallestHigher.csproj", "{ABCE4C14-DB7B-40EE-9DB7-353270ACFB63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetHashCode", "GetHashCode\GetHashCode.csproj", "{D9A59B3E-C496-43AC-AF8B-10F7CB919B42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetHashCode", "GetHashCode\GetHashCode.csproj", "{D9A59B3E-C496-43AC-AF8B-10F7CB919B42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationXML", "SerializationXML\SerializationXML.csproj", "{403E848D-921B-48CA-B66D-97DD153FFCAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{D9A59B3E-C496-43AC-AF8B-10F7CB919B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9A59B3E-C496-43AC-AF8B-10F7CB919B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9A59B3E-C496-43AC-AF8B-10F7CB919B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403E848D-921B-48CA-B66D-97DD153FFCAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403E848D-921B-48CA-B66D-97DD153FFCAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403E848D-921B-48CA-B66D-97DD153FFCAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403E848D-921B-48CA-B66D-97DD153FFCAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
