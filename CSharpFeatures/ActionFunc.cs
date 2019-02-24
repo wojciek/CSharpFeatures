@@ -17,13 +17,13 @@ namespace CSharpFeatures
 
     public void SomeFunc()
     {
-      //Func--------------------------------------------------------------------
+      //Func--------------------------------------------------------------------Func<TParameter, TOutput>
       //skrocony sposob tworzenia delegata do jednej linijki z Func - czyli delegata zwracająca
       Func<Double, Double> someFunc = y => { return y * y; };//działąnie i zwrot danych
       double some = someFunc(15);
       Console.WriteLine(some);
 
-      //Action--------------------------------------------------------------------
+      //Action--------------------------------------------------------------------Action<T> a'la void
       //Action delegata nic nie zwracająca 
       Action<string, string, int> SomeAction = (z, i, a) => Console.WriteLine("Wynik z delegata z zmienną : " + z + i + 500 * a);//tutaj po prostu jakieś działanie
 
