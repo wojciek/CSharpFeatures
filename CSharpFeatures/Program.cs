@@ -9,21 +9,6 @@ namespace CSharpFeatures
     static List<int> myList = new List<int>();
     static void Main(string[] args)
     {
-      DivLine("Delegaty Action i Func");//-------------------------------------------------------------
-      ActionFunc actionFunc = new ActionFunc();
-
-      Func<string, string, double> returningFunction = actionFunc.ReturnValue;
-
-      double returnedResult = returningFunction("BMW", "M6");
-      Show("Zwrócona wartośc z delegata Func: " + returningFunction("BMW", "M6"));
-
-
-      Action<string, string> doSomethingVoid = actionFunc.DoSomething;
-
-      doSomethingVoid("Audi", "R8");
-      DivLine("Delegaty Action i Func");//-------------------------------------------------------------
-
-
       DivLine("Refleksje");//-------------------------------------------------------------
       Show(SomeReflection.TypeOfMethod());
 
@@ -54,6 +39,7 @@ namespace CSharpFeatures
       SomeReflection.AddListElementsReflection();
 
       DivLine("Refleksje");//-------------------------------------------------------------
+
       DivLine("Yield");//-------------------------------------------------------------
       FillList();//wypełnij listę elementami int
       ShowListElements(myList);
@@ -93,20 +79,6 @@ namespace CSharpFeatures
             Console.WriteLine("Powtarza się liczba" + testArray[i]);
         }
       }
-
-
-      DivLine("Zwykłe delegaty");//-------------------------------------------------------------
-      Console.ReadKey();
-      Some some = new Some();
-      some.SomeMethod(SomeDelegateMethod);
-      DivLine();
-
-
-
-      DivLine("Wywołanie delegata z invoke");//-------------------------------------------------------------
-      Some.Wow();
-      Console.WriteLine("The end of application!");
-      Console.ReadKey();
     }
 
     static void SomeDelegateMethod(int i)

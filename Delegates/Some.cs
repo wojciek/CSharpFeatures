@@ -1,15 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Threading;
 
-namespace CSharpFeatures
+namespace Delegates
 {
   public class Some
   {
     public delegate void SomeMethodDelegate(int i);
 
-    public delegate double CalculateDel(double x);
-
-    public static CalculateDel calculateSome = Calculate;
     public void SomeMethod(SomeMethodDelegate someMethodDelegate)
     {
       int a = 0;
@@ -20,6 +19,10 @@ namespace CSharpFeatures
         Thread.Sleep(1000);
       }
     }
+
+    public delegate double CalculateDel(double x);
+
+    public static CalculateDel calculateSome = Calculate;
 
     //wywołanie delegata
     public static void Wow()

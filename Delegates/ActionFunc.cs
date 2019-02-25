@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CSharpFeatures
+namespace Delegates
 {
   public class ActionFunc
   {
